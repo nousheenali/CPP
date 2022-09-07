@@ -111,10 +111,10 @@ int PhoneBook::display_entries()
                 //prevents printing empty columns
                 if (!contacts[index].get_firstname().empty())
                 {
-                    std::cout << "First Name:" << contacts[index].get_firstname() << std::endl;
-                    std::cout << "Last Name:" << contacts[index].get_lastname()<< std::endl;
-                    std::cout << "Nick Name:" << contacts[index].get_nickname() << std::endl;
-                    std::cout << "Phone Number:" << contacts[index].get_phonenumber() << std::endl;
+                    std::cout << "First Name : " << contacts[index].get_firstname() << std::endl;
+                    std::cout << "Last Name : " << contacts[index].get_lastname()<< std::endl;
+                    std::cout << "Nick Name : " << contacts[index].get_nickname() << std::endl;
+                    std::cout << "Phone Number : " << contacts[index].get_phonenumber() << std::endl;
                     break;
                 }
                 //prevents empty column printing
