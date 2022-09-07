@@ -6,13 +6,13 @@
 #    By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/05 09:59:05 by nali              #+#    #+#              #
-#    Updated: 2022/09/07 20:50:34 by nali             ###   ########.fr        #
+#    Updated: 2022/09/07 22:40:18 by nali             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= phonebook
 
-SRCS	= main.cpp phonebook.cpp contact.cpp
+SRCS	= main.cpp PhoneBook.cpp Contact.cpp
 
 OBJS	= ${SRCS:.cpp=.o}
 

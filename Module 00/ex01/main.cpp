@@ -6,14 +6,14 @@
 /*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 14:09:29 by nali              #+#    #+#             */
-/*   Updated: 2022/09/07 21:21:46 by nali             ###   ########.fr       */
+/*   Updated: 2022/09/07 22:41:14 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
-#include "contact.hpp"
-#include "phonebook.hpp"
+#include "Contact.hpp"
+#include "PhoneBook.hpp"
  
 int main(void)
 {

@@ -6,11 +6,11 @@
 /*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 17:19:18 by nali              #+#    #+#             */
-/*   Updated: 2022/09/07 18:26:27 by nali             ###   ########.fr       */
+/*   Updated: 2022/09/07 22:40:57 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.hpp"
+#include "Contact.hpp"
 
 void Contact::create_contact(std::string fname, std::string lname, std::string nname, std::string phone, std::string secret)
 {
