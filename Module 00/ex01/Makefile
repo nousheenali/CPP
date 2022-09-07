@@ -27,7 +27,7 @@ all:	${NAME}
 .c.o:	${CC} ${CFLAGS} -I -c $< -o ${<:.cpp=.o}
 
 ${NAME}:	${OBJS}
-		$(CC) ${CFLAGS} -g ${SRCS} -o $(NAME)
+		$(CC) ${CFLAGS} ${SRCS} -o $(NAME)
 		${RM} ${OBJS}
 			
 
