@@ -6,13 +6,13 @@
 #    By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/05 09:59:05 by nali              #+#    #+#              #
-#    Updated: 2022/09/24 17:34:48 by nali             ###   ########.fr        #
+#    Updated: 2022/09/27 12:42:45 by nali             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= animal
+NAME	= bureaucrat
 
-SRCS	= main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
+SRCS	= main.cpp Bureaucrat.cpp
 
 OBJS	= ${SRCS:.cpp=.o}
 
