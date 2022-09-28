@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
+/*   Phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/07 16:59:15 by nali              #+#    #+#             */
-/*   Updated: 2022/09/07 22:40:47 by nali             ###   ########.fr       */
+/*   Updated: 2022/09/26 10:09:56 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ void PhoneBook::create_entry(std::string fname, std::string lname,
     i++;
 }
 
-void PhoneBook::print_value(std::string str)
+void PhoneBook::
+print_value(std::string str)
 {
     
     std::cout << std::setw(10) << std::right << str << "|";
@@ -122,7 +123,6 @@ int PhoneBook::display_entries()
                     std::cout << "Invalid index. Please try Again!" << std::endl;
             }
         }
-    
     }
     return (0);
 }        

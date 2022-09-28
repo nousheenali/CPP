@@ -3,15 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/05 14:09:29 by nali              #+#    #+#             */
-/*   Updated: 2022/09/07 22:41:14 by nali             ###   ########.fr       */
+/*   Updated: 2022/09/26 10:07:57 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
 #include "Contact.hpp"
 #include "PhoneBook.hpp"
  
@@ -83,15 +81,19 @@ int main(void)
             }
             phonebook.create_entry(fname, lname, nname, phone, secret);
         }
-        if (command == "SEARCH")
+        else if (command == "SEARCH")
         {
             stop = phonebook.display_entries();
         }
-        if (std::cin.eof() || command == "EXIT")
+        else if (std::cin.eof() || command == "EXIT")
             stop = 1;
+        else
+            std::cout <<"---INVALID COMMAND---"<<std::endl;;
         //clear buffer
         //after searching empty directory some texts were getting repeated
         command.clear();
+        std::cin.ignore(INT_MAX,'\n'); // clear input buffer in case of any remaining input
+                                        //eg: index 1jldj
     }
         
     return (0);
