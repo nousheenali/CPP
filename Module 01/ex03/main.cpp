@@ -6,7 +6,7 @@
 /*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 08:26:08 by nali              #+#    #+#             */
-/*   Updated: 2022/09/13 13:39:05 by nali             ###   ########.fr       */
+/*   Updated: 2022/09/28 21:51:47 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main()
         Weapon  club = Weapon("crude spiked club");
         HumanA bob("Bob", club);
         bob.attack();
-        club.setType("some other type of club");
+        club.setType("some other type of club"); /*since Bob has a refernce to club, if change value of club it will be reflected in bob*/
         bob.attack();
     } 
     {

@@ -6,15 +6,13 @@
 /*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 11:18:48 by nali              #+#    #+#             */
-/*   Updated: 2022/09/13 15:08:14 by nali             ###   ########.fr       */
+/*   Updated: 2022/09/28 21:27:22 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HUMANA_H
 #define HUMANA_H
 
-#include <iostream>
-#include <string>
 #include "Weapon.hpp"
 
 class HumanA
@@ -22,6 +20,7 @@ class HumanA
     private :
         std::string name;
         Weapon& weapon; //HumanA will always be armed hence reference type
+                        //since reference type cannot be NULL
     
     public:
         HumanA(std::string name, Weapon &weapon);

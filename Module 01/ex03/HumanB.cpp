@@ -6,7 +6,7 @@
 /*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 14:26:39 by nali              #+#    #+#             */
-/*   Updated: 2022/09/13 15:13:11 by nali             ###   ########.fr       */
+/*   Updated: 2022/09/28 22:01:27 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ HumanB::HumanB(std::string name)
 
 void HumanB::setWeapon(Weapon& weapon)
 {
-    this->weapon = &weapon;
+    this->weapon = &weapon; /*since weapon in a pointer we assign the address*/
 }
 
 void HumanB::attack(void)

@@ -6,7 +6,7 @@
 /*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 08:26:08 by nali              #+#    #+#             */
-/*   Updated: 2022/09/12 15:21:56 by nali             ###   ########.fr       */
+/*   Updated: 2022/09/28 21:20:58 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,22 @@ int main(void)
     std::string name;
     int n;
     Zombie* z;
+    int i;
 
-    std::cout << "Enter name of Zombie:";
+    std::cout << "Enter name of Zombie: ";
     std::cin >> name;
-    std::cout << "Enter no: of Zombies:";
+    std::cout << "Enter no: of Zombies: ";
     std::cin >> n;
     z = zombieHorde(n, name);
-    for (int i = 0; i < n; i++)
+    if (z == NULL)
+        return (0);
+    i = 0;
+    while (i < n)
     {
         z[i].announce();
+        i++;
     }
-    delete[] z;
+    std::cout << "---------------DELETING ZOMBIES----------------------" <<std::endl;
+    delete[] z; //deletes entire array of zombies
+    return (0);
 }

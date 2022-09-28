@@ -6,7 +6,7 @@
 /*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 08:26:08 by nali              #+#    #+#             */
-/*   Updated: 2022/09/14 12:33:58 by nali             ###   ########.fr       */
+/*   Updated: 2022/09/28 22:24:31 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 #include <fstream>
 #include <cstring>
 
-std::string GetFileName(std::string filepath)
+std::string getFileName(std::string filepath)
 {
     int lastindex;  
     std::string name;
     
-    lastindex = filepath.find_last_of(".");
+    lastindex = filepath.find_last_of("."); //find position of last .
     name = filepath.substr(0, lastindex);
     return (name);
 }
 
-std::string string_replace(std::ifstream& in_file, char *s1, char *s2)
+std::string replaceString(std::ifstream& in_file, char *s1, char *s2)
 {
     size_t found;
     std::string line;
@@ -34,10 +34,11 @@ std::string string_replace(std::ifstream& in_file, char *s1, char *s2)
     found = line.find(s1);
     // npos is a static member constant value with the 
     // greatest possible value for an element of type size_t.
+    //if found == std::string::npos then the s1 wasn't found in line
     if (found != std::string::npos)
     {
         i = std::strlen(s1);
-        while(found != std::string::npos)
+        while(found != std::string::npos) //after the first string is found and replced keep looking for the next string occurence
         {
             line = line.substr(0,found) + s2 + line.substr(found+ i) ;
             found = line.find(s1);
@@ -68,7 +69,7 @@ int main(int argc, char **argv)
         }
 	    else
         {
-            filename = GetFileName(argv[1]).append(".replace");
+            filename = getFileName(argv[1]).append(".replace");
             out_file.open(filename, std::ios::out | std::ios::trunc);
             if (!out_file)
             {
@@ -77,7 +78,7 @@ int main(int argc, char **argv)
             }
             while(!in_file.eof())
             {
-                line = string_replace(in_file, argv[2], argv[3]);
+                line = replaceString(in_file, argv[2], argv[3]);
                 out_file << line << std::endl; 
             }
             in_file.close();

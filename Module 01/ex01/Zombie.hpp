@@ -6,7 +6,7 @@
 /*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 10:10:40 by nali              #+#    #+#             */
-/*   Updated: 2022/09/12 10:53:07 by nali             ###   ########.fr       */
+/*   Updated: 2022/09/28 20:49:39 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #define ZOMBIE_H
 
 #include <string>
+#include <iostream>
 
 class Zombie
 {
