@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 05:58:16 by nali              #+#    #+#             */
-/*   Updated: 2022/09/15 09:47:56 by nali             ###   ########.fr       */
+/*   Updated: 2022/09/29 09:26:07 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,13 +59,15 @@ levels resolveoption(std::string level)
 void    Harl::complain(std::string level)
 {
 
-    void (Harl::*pfnComplain[4])(void);
+    void (Harl::*pfnComplain[4])(void);  //declares an array of member function pointers pfnComplain
     pfnComplain[0] = &Harl::debug;
     pfnComplain[1] = &Harl::info;
     pfnComplain[2] = &Harl::warning;
     pfnComplain[3] = &Harl::error;
 
-    switch(resolveoption(level))
+    //switch works for int values, so we use this function to convert to 
+    //level to enum values
+    switch(resolveoption(level)) 
     {
         case DEBUG:
             (this->*pfnComplain[DEBUG])();

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 08:26:08 by nali              #+#    #+#             */
-/*   Updated: 2022/09/15 09:33:18 by nali             ###   ########.fr       */
+/*   Updated: 2022/09/29 09:22:02 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,11 @@ int main(int argc, char **argv)
     if (argc == 2)
     {
         Harl harl;
-        // std::string str(argv[1]);
-        // std::cout <<str<<std::endl;
         harl.complain(argv[1]);
+    }
+    else
+    {
+        std::cout << "Please provide one argument(DEBUG/INFO/WARNING/ERROR)." <<std::endl;
     }
     return 0; 
 }

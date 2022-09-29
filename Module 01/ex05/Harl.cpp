@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 05:58:16 by nali              #+#    #+#             */
-/*   Updated: 2022/09/15 09:44:13 by nali             ###   ########.fr       */
+/*   Updated: 2022/09/29 09:13:37 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,9 @@ void Harl::error( void )
 void    Harl::complain(std::string level)
 {
     int i;
-    std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-    void (Harl::*pfnComplain[4])(void);
-    pfnComplain[0] = &Harl::debug;
+    std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"}; //create an array that stores different input options
+    void (Harl::*pfnComplain[4])(void); //declares an array of member function pointers pfnComplain
+    pfnComplain[0] = &Harl::debug; //assign address of member function to the pointer
     pfnComplain[1] = &Harl::info;
     pfnComplain[2] = &Harl::warning;
     pfnComplain[3] = &Harl::error;
