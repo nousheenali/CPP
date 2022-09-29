@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 08:26:08 by nali              #+#    #+#             */
-/*   Updated: 2022/09/28 21:22:46 by nali             ###   ########.fr       */
+/*   Updated: 2022/09/29 11:24:12 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int main(void)
     z = newZombie(name); 
     z->announce();
     delete z; //we have to manually delete dynamiaclly allocated member
-    
+    std::cin.ignore(INT_MAX,'\n'); // clear cin
     std::cout << std::endl;
     
     std::cout << "---STATIC ALLOCATION---" <<std::endl;

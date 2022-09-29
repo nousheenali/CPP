@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 08:26:08 by nali              #+#    #+#             */
-/*   Updated: 2022/09/28 21:20:58 by nali             ###   ########.fr       */
+/*   Updated: 2022/09/29 11:25:48 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,10 @@ int main(void)
 
     std::cout << "Enter name of Zombie: ";
     std::cin >> name;
+    std::cin.ignore(INT_MAX,'\n');//clear cin buffer
     std::cout << "Enter no: of Zombies: ";
     std::cin >> n;
+    std::cin.ignore(INT_MAX,'\n');
     z = zombieHorde(n, name);
     if (z == NULL)
         return (0);

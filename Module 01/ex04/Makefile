@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+         #
+#    By: nali <nali@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/05 09:59:05 by nali              #+#    #+#              #
-#    Updated: 2022/09/28 23:10:43 by nali             ###   ########.fr        #
+#    Updated: 2022/09/29 11:18:25 by nali             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,9 +27,7 @@ all:	${NAME}
 .c.o:	${CC} ${CFLAGS} -I -c $< -o ${<:.cpp=.o}
 
 ${NAME}:	${OBJS}
-		$(CC) ${CFLAGS} ${SRCS} -o $(NAME)
-		${RM} ${OBJS}
-			
+		$(CC) ${CFLAGS} ${SRCS} -o $(NAME)			
 
 clean:		
 			${RM} ${OBJS}
