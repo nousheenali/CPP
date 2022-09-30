@@ -6,13 +6,13 @@
 #    By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/05 09:59:05 by nali              #+#    #+#              #
-#    Updated: 2022/09/30 08:40:09 by nali             ###   ########.fr        #
+#    Updated: 2022/09/30 08:42:50 by nali             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= bureaucrat
+NAME	= form
 
-SRCS	= main.cpp Bureaucrat.cpp
+SRCS	= main.cpp Bureaucrat.cpp Form.cpp
 
 OBJS	= ${SRCS:.cpp=.o}
 
