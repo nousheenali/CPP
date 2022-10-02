@@ -6,7 +6,7 @@
 /*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 13:52:15 by nali              #+#    #+#             */
-/*   Updated: 2022/09/30 18:11:01 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/02 21:55:17 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ class Form
         int getSign_grade() const;
         int getExecute_grade() const;
         void beSigned(Bureaucrat &B);
+        virtual void execute(Bureaucrat const & executor) const = 0;
         
         class GradeTooHighException: public std::exception
         {
@@ -56,6 +57,14 @@ class Form
                 const char *str;
             public :
                 GradeTooLowException(const char *str);//constructor that takes an input string for custom msg
+                const char *what() const throw();
+        };
+        class FormNotSigned: public std::exception
+        {
+            private:    
+                const char *str;
+            public :
+                FormNotSigned(const char *str);//constructor that takes an input string for custom msg
                 const char *what() const throw();
         };
 };

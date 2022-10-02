@@ -6,7 +6,7 @@
 /*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 15:31:01 by nali              #+#    #+#             */
-/*   Updated: 2022/09/30 18:37:13 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/02 16:10:34 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,8 @@ int main()
     {
         Bureaucrat B("Jack", 1);
         Form F("Application 111", 2, 4);
-        B.signForm(F); //Bureaucrat::signForm calls Form::beSigned
+        B.signForm(F);  // Checks if form is signed
+                        // Bureaucrat::signForm calls Form::beSigned
     }
     catch(std::exception & e)
     {

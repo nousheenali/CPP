@@ -6,7 +6,7 @@
 /*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 14:07:43 by nali              #+#    #+#             */
-/*   Updated: 2022/09/30 18:39:48 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/02 16:44:09 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void Bureaucrat::signForm(Form &form)
     try
     {
         form.beSigned(*this);
-        std::cout << this->name << " signed " << form.getName() <<std::endl;
+        std::cout << this->name << " signed " << form.getName()<< "." <<std::endl;
     }
     catch(std::exception & e)
     {

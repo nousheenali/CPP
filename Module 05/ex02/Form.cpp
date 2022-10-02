@@ -6,7 +6,7 @@
 /*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 07:26:40 by nali              #+#    #+#             */
-/*   Updated: 2022/09/30 18:40:43 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/02 22:00:33 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,19 @@ const char *Form::GradeTooLowException::what() const throw()
     return (this->str);
 }
 
+const char *Form::FormNotSigned::what() const throw()
+{
+    return (this->str);
+}
+
 //creates an exception object and initializes the string message
 Form::GradeTooHighException::GradeTooHighException(const char *str):str(str)
 {}
 
 Form::GradeTooLowException::GradeTooLowException(const char *str):str(str)
+{}
+
+Form::FormNotSigned::FormNotSigned(const char *str):str(str)
 {}
 
 Form::Form(std::string name, int sign_grade, int execute_grade)

@@ -6,68 +6,55 @@
 /*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 15:31:01 by nali              #+#    #+#             */
-/*   Updated: 2022/09/30 18:37:13 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/02 21:37:16 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 int main()
 {
-    try
-    {
-        Form f1("Payment", 0, 140);
-    }
-    catch(std::exception & e)
-    {
-        std::cout << e.what() <<std::endl;
-    }
-    try
-    {
-        Form f1("Payment", 157, 140);
-    }
-    catch(std::exception & e)
-    {
-        std::cout << e.what() <<std::endl;
-    }
-    try
-    {
-        Form f1("Payment", 1, -3);
-    }
-    catch(std::exception & e)
-    {
-        std::cout << e.what() <<std::endl;
-    }
-    try
-    {
-        Form f1("Payment", 1, 160);
-    }
-    catch(std::exception & e)
-    {
-        std::cout << e.what() <<std::endl;
-    }
-    std::cout<<"-------------------------------"<<std::endl;
-    try
-    {
-        Bureaucrat B("Jack", 1);
-        Form F("Application 111", 2, 4);
-        B.signForm(F); //Bureaucrat::signForm calls Form::beSigned
-    }
-    catch(std::exception & e)
-    {
-        std::cout << e.what() <<std::endl;
-    }
-    std::cout<<"-------------------------------"<<std::endl;
-    try
-    {
-        Bureaucrat B("Jack", 3);
-        Form F("Application 121", 2, 4);
-        B.signForm(F);
-    }
-    catch(std::exception & e)
-    {
-        std::cout << e.what() <<std::endl;
-    }
-    std::cout<<"-------------------------------"<<std::endl;
+    ShrubberyCreationForm SF("home");
+    
+    //  try
+    // {
+    //     //when grade too low to sign 
+    //     Bureaucrat B1("Matt", 5);
+    //     Form F("Payment", 4, 6);
+    //     B1.signForm(F);
+    //     F.execute(B1);
+    // }
+    // catch(const std::exception& e)
+    // {
+    //     std::cerr << e.what() << '\n';
+    // }
+    // std::cout<<"-------------------------------"<<std::endl;
+    // try
+    // {
+    //     //when grade high enough to sign but low to execute
+    //     Bureaucrat B1("Matt", 2);
+    //     Form F("Payment", 5, 1);
+    //     B1.signForm(F);
+    //     F.execute(B1);
+    // }
+    // catch(const std::exception& e)
+    // {
+    //     std::cerr << e.what() << '\n';
+    // }
+    // std::cout<<"-------------------------------"<<std::endl;
+    // try
+    // {
+    //     //when grade high enough to sign  and execute
+    //     Bureaucrat B1("Matt", 1); //the person who signs
+    //     Form F("Payment", 3, 2);
+    //     B1.signForm(F);
+    //     F.execute(B1);
+    // }
+    // catch(const std::exception& e)
+    // {
+    //     std::cerr << e.what() << '\n';
+    // }
+    // std::cout<<"-------------------------------"<<std::endl;
     return (0);
 }
