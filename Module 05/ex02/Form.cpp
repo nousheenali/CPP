@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 07:26:40 by nali              #+#    #+#             */
-/*   Updated: 2022/10/03 08:40:47 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/03 12:06:34 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,7 @@ void Form::checkStatus(Bureaucrat const & executor) const
 {
     if(this->getSign() == true)
     {
-        std::cout << "The form is signed." <<std::endl;
+        //The form is signed.
         if (executor.getGrade() > this->getExecute_grade())
             throw GradeTooLowException("The Executor grade too low to execute form.");
     }

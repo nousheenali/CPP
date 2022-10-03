@@ -3,17 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 08:25:16 by nali              #+#    #+#             */
-/*   Updated: 2022/10/03 08:26:02 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/03 12:11:40 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ROBOTOMYREQUESTFORM_H
 #define ROBOTOMYREQUESTFORM_H
 
+#include <cstdlib>
 #include "Form.hpp"
+
 
 class RobotomyRequestForm : public Form
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 17:49:38 by nali              #+#    #+#             */
-/*   Updated: 2022/10/03 08:40:02 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/03 10:06:40 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(std::string target)
 
 void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
-    this->checkStatus(executor);
-    // this.checkStatus(executor, *this);
-    
+    this->checkStatus(executor);   
     std::ofstream out_file;
     std::string filename = target;
             
@@ -36,5 +34,14 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
         std::cout << "Unable to open output file" << std::endl;
         return ;
     }
-    out_file << "hello there hello!";
+    out_file    <<"//     _-_-_-_" << std::endl
+                <<"//  /~~       ~~\\" << std::endl
+                <<"// /~~         ~~\\" << std::endl
+                <<"//{               }" << std::endl
+                <<"// \\  _-     -_  /" << std::endl
+                <<"//   ~ \\\\  //  ~" << std::endl
+                <<"//       | |" <<std::endl
+                <<"//       | |" <<std::endl
+                <<"//      // \\\\" <<std::endl;
+    std::cout << "ShrubberyCreationForm has been executed." << std::endl;
 }

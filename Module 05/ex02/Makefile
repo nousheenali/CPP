@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+         #
+#    By: nali <nali@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/05 09:59:05 by nali              #+#    #+#              #
-#    Updated: 2022/10/02 21:38:38 by nali             ###   ########.fr        #
+#    Updated: 2022/10/03 12:19:59 by nali             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= form
 
-SRCS	= main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp
+SRCS	= main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp
 
 OBJS	= ${SRCS:.cpp=.o}
 
