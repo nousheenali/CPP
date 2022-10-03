@@ -6,7 +6,7 @@
 /*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 15:31:01 by nali              #+#    #+#             */
-/*   Updated: 2022/10/02 21:37:16 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/03 08:23:17 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,44 @@
 
 int main()
 {
-    ShrubberyCreationForm SF("home");
+    //ShrubberyCreationForm default values --> sign grade = 145, execute grade = 137
+    try
+    {
+        //when form is not signed
+        Bureaucrat B("Jack", 2);
+        ShrubberyCreationForm SF("home");
+        SF.execute(B);
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    std::cout<<"-------------------------------"<<std::endl;
+    try
+    {
+        //when grade high enough to sign but low to execute
+        Bureaucrat B("Jack", 140);
+        ShrubberyCreationForm SF("home");
+        B.signForm(SF);
+        SF.execute(B);
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    std::cout<<"-------------------------------"<<std::endl;
+    try
+    {
+        //when grade high enough to sign and execute
+        Bureaucrat B("Jack", 130);
+        ShrubberyCreationForm SF("home");
+        B.signForm(SF);
+        SF.execute(B);
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
     
     //  try
     // {

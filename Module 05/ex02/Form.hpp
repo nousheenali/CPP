@@ -6,7 +6,7 @@
 /*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 13:52:15 by nali              #+#    #+#             */
-/*   Updated: 2022/10/02 21:55:17 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/03 08:40:37 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ class Form
         int getExecute_grade() const;
         void beSigned(Bureaucrat &B);
         virtual void execute(Bureaucrat const & executor) const = 0;
+        void checkStatus(Bureaucrat const & executor) const;
         
         class GradeTooHighException: public std::exception
         {
