@@ -6,7 +6,7 @@
 /*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 15:36:00 by nali              #+#    #+#             */
-/*   Updated: 2022/09/30 18:10:41 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/03 18:00:57 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ class Bureaucrat
         void incrementGrade();
         void decrementGrade();
         void signForm(Form &form);
+        void executeForm(Form const & form);
         class GradeTooHighException: public std::exception
         {
             public :

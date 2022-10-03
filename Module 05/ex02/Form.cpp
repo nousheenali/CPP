@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 07:26:40 by nali              #+#    #+#             */
-/*   Updated: 2022/10/03 12:06:34 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/03 18:06:37 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,10 +104,10 @@ void Form::checkStatus(Bureaucrat const & executor) const
     {
         //The form is signed.
         if (executor.getGrade() > this->getExecute_grade())
-            throw GradeTooLowException("The Executor grade too low to execute form.");
+            throw GradeTooLowException("the Executor grade too low to execute form.");
     }
     else
-        throw FormNotSigned("The Form has not been signed.");
+        throw FormNotSigned("the Form has not been signed.");
 }
 
 std::ostream& operator<<(std::ostream& out, const Form & f)

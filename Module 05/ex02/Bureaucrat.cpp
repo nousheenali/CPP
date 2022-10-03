@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 14:07:43 by nali              #+#    #+#             */
-/*   Updated: 2022/10/03 10:07:42 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/03 18:06:06 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,23 @@ void Bureaucrat::signForm(Form &form)
         called and then terminate function is called. The catch in the main
         will not be called*/
         std::cout << this->name << " couldn't sign " << form.getName() << \
+        " because " << e.what() << std::endl;
+    }
+}
+
+void Bureaucrat::executeForm(Form const & form)
+{
+    try
+    {
+        form.execute(*this);
+        std::cout << this->name << " executed " << form.getName() << "." <<std::endl;
+    }
+    catch(std::exception & e)
+    {
+        /*If exception occurs inside the above try block this catch will be 
+        called and then terminate function is called. The catch in the main
+        will not be called*/
+        std::cout << this->name << " couldn't execute " << form.getName() << \
         " because " << e.what() << std::endl;
     }
 }
