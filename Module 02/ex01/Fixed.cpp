@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 12:57:11 by nali              #+#    #+#             */
-/*   Updated: 2022/09/18 12:05:06 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/04 09:02:26 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ Fixed::Fixed(const int n)
 {
     std::cout <<"Int constructor called"<< std::endl;
     num = n << this->fractionalbits;
+    std::cout << num <<std::endl;
 }
 
 /*to convert to fixed point, mutliply by 2^(number of fractional bits).
@@ -70,7 +71,7 @@ void Fixed::setRawBits( int const raw )
     this->num = raw;
 }
 
-/*to convert from floating poit to fixed point
+/*to convert from fixed point to floating point
 this-> num is integer
 convert this->num to floating point by multiplying by 1.0
 then dvide by 2^(number of fractional bits) */
@@ -84,7 +85,8 @@ float Fixed::toFloat(void) const
     return((float)(this->num * 1.0/val));
 }
 
-/*to convert to floating point, divide by 2^(number of fractional bits).
+/*to convert to integer, 
+divide by 2^(number of fractional bits).
  i.e., bit wise shift to right*/
 int Fixed::toInt( void ) const
 {

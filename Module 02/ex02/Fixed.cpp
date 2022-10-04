@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 12:57:11 by nali              #+#    #+#             */
-/*   Updated: 2022/09/19 12:36:30 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/04 09:31:55 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,19 @@
 
 Fixed::Fixed()
 {
-    std::cout <<"Default constructor called"<< std::endl;
+    // std::cout <<"Default constructor called"<< std::endl;
     num = 0;
 }
 
 Fixed::Fixed(const int n)
 {
-    std::cout <<"Int constructor called"<< std::endl;
+    // std::cout <<"Int constructor called"<< std::endl;
     num = n << this->fractionalbits;
 }
 
 Fixed::Fixed(const float n)
 {
-    std::cout <<"Float constructor called"<< std::endl;
+    // std::cout <<"Float constructor called"<< std::endl;
     int val;
     
     val = 1;
@@ -38,30 +38,30 @@ Fixed::Fixed(const float n)
         
 Fixed::Fixed (const Fixed &old_obj)
 {
-    std::cout <<"COpy constructor called"<< std::endl;
+    // std::cout <<"Copy constructor called"<< std::endl;
     *this = old_obj;   
 }
 
 void Fixed::operator= (const Fixed &fp )
 { 
-    std::cout <<"Copy Assignment operator called"<< std::endl;
+    // std::cout <<"Copy Assignment operator called"<< std::endl;
     this->num = fp.num;
 }
 
 Fixed::~Fixed()
 {
-    std::cout <<"Destructor called"<< std::endl;
+    // std::cout <<"Destructor called"<< std::endl;
 }
         
 int Fixed::getRawBits( void ) const
 {
-    std::cout <<"getRawBits member function called"<< std::endl;
+    // std::cout <<"getRawBits member function called"<< std::endl;
     return (num);
 }
 
 void Fixed::setRawBits( int const raw )
 {
-    std::cout <<"setRawBits member function called"<< std::endl;
+    // std::cout <<"setRawBits member function called"<< std::endl;
     this->num = raw;
 }
 
