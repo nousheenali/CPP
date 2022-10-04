@@ -3,19 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 12:48:47 by nali              #+#    #+#             */
-/*   Updated: 2022/09/22 13:57:56 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/04 14:11:52 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-void print_values(ClapTrap *obj)
+void ClapTrap::print_values(ClapTrap *obj)
 {
     std::cout << "Name:"<< obj->getName() <<"  Hit:" << obj->getHitPoints() \
     <<"  Energy:" << obj->getEnergyPoints() << "  Damage:" << obj->getAttackDamage() << std::endl;
+    std::cout << std::endl;
 }
 
 ClapTrap::ClapTrap()

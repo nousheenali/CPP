@@ -3,24 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 12:48:47 by nali              #+#    #+#             */
-/*   Updated: 2022/09/22 13:57:37 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/04 14:11:17 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-void print_values(ClapTrap *obj)
+void ClapTrap::print_values(ClapTrap *obj)
 {
     std::cout << "Name:"<< obj->getName() <<"  Hit:" << obj->getHitPoints() \
     <<"  Energy:" << obj->getEnergyPoints() << "  Damage:" << obj->getAttackDamage() << std::endl;
+    std::cout << std::endl;
 }
 
 ClapTrap::ClapTrap()
 {
-    std::cout <<"ClapTrap Default constructor called"<< std::endl;
+    // std::cout <<"ClapTrap Default constructor called"<< std::endl;
     this->Name = "";
     this->Hit_points = 10;
     this->Energy_points = 10;
@@ -29,7 +30,7 @@ ClapTrap::ClapTrap()
 
 ClapTrap::ClapTrap(std::string Name)
 {
-    std::cout <<"ClapTrap Parameterized Constructor called"<< std::endl;
+    // std::cout <<"ClapTrap Parameterized Constructor called"<< std::endl;
     this->Name = Name;
     this->Hit_points = 10;
     this->Energy_points = 10;
@@ -38,13 +39,13 @@ ClapTrap::ClapTrap(std::string Name)
 
 ClapTrap::ClapTrap(const ClapTrap &old_obj)
 {
-    std::cout <<"ClapTrap Copy constructor called"<< std::endl;
+    // std::cout <<"ClapTrap Copy constructor called"<< std::endl;
     *this = old_obj;
 }
 
 void ClapTrap::operator= (const ClapTrap &ct)
 { 
-    std::cout <<"ClapTrap Copy assignment operator called"<< std::endl;
+    // std::cout <<"ClapTrap Copy assignment operator called"<< std::endl;
     this->Name = ct.Name;
     this->Hit_points = ct.Hit_points;
     this->Energy_points = ct.Energy_points;
@@ -53,7 +54,7 @@ void ClapTrap::operator= (const ClapTrap &ct)
 
 ClapTrap::~ClapTrap()
 {
-    std::cout <<"ClapTrap Destructor called"<< std::endl;
+    // std::cout <<"ClapTrap Destructor called"<< std::endl;
 }
 
 // When ClapTrack attacks, it causes its target to lose <attack damage> hit points.

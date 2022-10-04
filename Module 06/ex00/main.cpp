@@ -5,27 +5,21 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 08:26:08 by nali              #+#    #+#             */
-/*   Updated: 2022/10/04 14:02:30 by nali             ###   ########.fr       */
+/*   Created: 2022/10/04 10:16:33 by nali              #+#    #+#             */
+/*   Updated: 2022/10/04 12:33:37 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#include "Converter.hpp"
+#include <iostream>
 
-int main(void) 
+int main(int argc, char *argv[])
 {
-
-    ScavTrap obj1("Bob");
-    ScavTrap st; 
-    st = obj1;
-    std::cout << std::endl; 
-    st.attack("Rob");
-    st.takeDamage(5);
-    st.beRepaired(10);
-    st.attack("Ness");
-    st.guardGate();
-
-    return 0; 
+   if (argc != 2)
+   {
+      std::cout << "Please provide one argument." <<std::endl;
+      return(0);
+   }
+   Converter c(argv[1]);
+   return (0);
 }
-

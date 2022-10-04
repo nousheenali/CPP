@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 12:46:18 by nali              #+#    #+#             */
-/*   Updated: 2022/09/22 14:01:38 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/04 14:12:05 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,9 @@ class ClapTrap
         int getHitPoints(void);
         int getEnergyPoints(void);
         int getAttackDamage(void);
+        void print_values(ClapTrap *obj);
         
 };
 
-void print_values(ClapTrap *obj);
 
 #endif

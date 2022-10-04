@@ -1,31 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Converter.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/12 08:26:08 by nali              #+#    #+#             */
-/*   Updated: 2022/10/04 14:02:30 by nali             ###   ########.fr       */
+/*   Created: 2022/10/04 12:32:54 by nali              #+#    #+#             */
+/*   Updated: 2022/10/04 12:33:57 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#include "Converter.hpp"
 
-int main(void) 
+Converter::Converter(std::string str)
 {
-
-    ScavTrap obj1("Bob");
-    ScavTrap st; 
-    st = obj1;
-    std::cout << std::endl; 
-    st.attack("Rob");
-    st.takeDamage(5);
-    st.beRepaired(10);
-    st.attack("Ness");
-    st.guardGate();
-
-    return 0; 
+    
 }
-
