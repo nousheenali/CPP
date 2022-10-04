@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nali <nali@student.42.fr>                  +#+  +:+       +#+         #
+#    By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/05 09:59:05 by nali              #+#    #+#              #
-#    Updated: 2022/10/04 09:58:35 by nali             ###   ########.fr        #
+#    Updated: 2022/10/04 21:19:23 by nali             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= form
+NAME	= converter
 
-SRCS	= main.cpp 
+SRCS	= main.cpp Converter.cpp
 
 OBJS	= ${SRCS:.cpp=.o}
 
