@@ -6,7 +6,7 @@
 /*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 10:16:33 by nali              #+#    #+#             */
-/*   Updated: 2022/10/04 22:05:00 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/09 19:14:45 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@ int main(int argc, char *argv[])
       return(0);
    }
    Converter c(argv[1]);
+   // std::cout << c <<std::endl;
    return (0);
 }

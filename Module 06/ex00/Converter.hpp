@@ -6,7 +6,7 @@
 /*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 12:28:17 by nali              #+#    #+#             */
-/*   Updated: 2022/10/04 21:37:02 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/09 23:06:52 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,11 @@ class Converter
     private:
         std::string str;
         int type;
-        char val_char;
-        // int val_int;
-        // float val_float;
-        // double val_double;
+        char valchar;
+        int valint;
+        float valfloat;
+        double valdouble;
+        int special;
         
         enum Type{CharType, IntType, FloatType, DoubleType, UnknownType};
         
@@ -36,6 +37,13 @@ class Converter
         // Converter& operator=(const Converter &obj);
 
         void checkType();
+        void convertToChar(void);
+        void convertToInt(void);
+        void convertToDouble(void);
+        void convertToFloat(void);
+        void printValues(void);
+        
+        
 };
 
 #endif
