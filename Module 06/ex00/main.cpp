@@ -6,7 +6,7 @@
 /*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 10:16:33 by nali              #+#    #+#             */
-/*   Updated: 2022/10/09 19:14:45 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/10 08:34:23 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,13 @@ int main(int argc, char *argv[])
       std::cout << "Please provide one argument." <<std::endl;
       return(0);
    }
-   Converter c(argv[1]);
-   // std::cout << c <<std::endl;
+   try
+   {
+      Converter c(argv[1]);
+   }
+   catch(const std::exception& e)
+   {
+      std::cerr << e.what() << std::endl;;
+   }
    return (0);
 }

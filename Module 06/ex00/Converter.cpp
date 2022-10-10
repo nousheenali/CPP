@@ -6,12 +6,12 @@
 /*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 12:32:54 by nali              #+#    #+#             */
-/*   Updated: 2022/10/09 23:08:43 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/10 09:52:49 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Converter.hpp"
-#include <iomanip> //for setprecision
+#include <iomanip> //for setprecision()
 
 void Converter::checkType()
 {
@@ -27,7 +27,7 @@ void Converter::checkType()
     }
     if (str == "-inf" || str == "+inf" || str == "nan")
     {
-        this->type = FloatType;
+        this->type = DoubleType;
         this->special = 2;
         return ;
         
@@ -41,7 +41,6 @@ void Converter::checkType()
     else if (l == 1 && !isdigit(str[0])) // for cases like +, - , .
     {
         this->type = UnknownType;
-        std::cout <<"Unknown type"<<std::endl;
         return ;
     }
     else 
@@ -53,10 +52,18 @@ void Converter::checkType()
         }
         else
             substr = str;
-        if (substr.find_first_not_of("0123456789") == std::string::npos && l <= 10) //checks if only digits present
+        if (substr.find_first_not_of("0123456789") == std::string::npos) //checks if only digits present
         {
             this->type = IntType;
-            valint = std::stoi(str);
+            try
+            {
+                valint = std::stoi(str);
+            }
+            catch(const std::exception& e)
+            {
+                std::cerr << "Integer value is out of Range." << '\n';
+                exit(1);
+            }
             return ;
         }
         if (substr.find('.') != std::string::npos && \
@@ -65,14 +72,30 @@ void Converter::checkType()
             if (substr.find_first_not_of(".0123456789") == std::string::npos && substr[l - 1] != '.') //check to see if no other character present
             {
                 this->type = DoubleType;
-                valdouble = std::stod(str);
+                try
+                {
+                    valdouble = std::stod(str);
+                }
+                catch(const std::exception& e)
+                {
+                    std::cerr << "Double value is out of Range." <<std::endl;
+                    exit(1);
+                }
                 return ;
             }
             else if (substr.find_first_not_of(".0123456789f") == std::string::npos &&\
             substr[l - 1] == 'f' && (substr.find_first_of("f") == substr.find_last_of("f"))) //checks if last char is 'f' and only one char present
             {
                 this->type = FloatType;
-                valfloat = std::stof(str);
+                try
+                {
+                    valfloat = std::stof(str);
+                }
+                catch(const std::exception& e)
+                {
+                    std::cerr << "Float value is out of Range." <<std::endl;
+                    exit(1);
+                }
                 return ;
             }
             else
@@ -138,10 +161,10 @@ void Converter::printValues(void)
         std::cout << "double: " << this->str <<std::endl;
         return;
     }  
-    if ((this->valint >= 0 && this->valint<= 31) || this->valint == 127)
-        std::cout << "char: Non displayable" <<std::endl;
-    else
+    if (this->valint >= 32 && this->valint<= 126)
         std::cout << "char: \'"<< this->valchar << "\'"<<std::endl;
+    else
+        std::cout << "char: Non displayable" <<std::endl;
     std::cout << "int: " << this->valint <<std::endl;
     std::cout << "float: "<< std::fixed << std::setprecision(1) <<this->valfloat <<"f" <<std::endl;
     std::cout << "double: "<< this->valdouble <<std::endl;

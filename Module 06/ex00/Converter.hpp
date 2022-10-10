@@ -6,7 +6,7 @@
 /*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 12:28:17 by nali              #+#    #+#             */
-/*   Updated: 2022/10/09 23:06:52 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/10 08:44:51 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,7 @@ class Converter
         void convertToInt(void);
         void convertToDouble(void);
         void convertToFloat(void);
-        void printValues(void);
-        
-        
+        void printValues(void);       
 };
 
 #endif
