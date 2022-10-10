@@ -3,15 +3,38 @@
 /*                                                        :::      ::::::::   */
 /*   Converter.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 12:32:54 by nali              #+#    #+#             */
-/*   Updated: 2022/10/10 09:52:49 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/10 10:46:47 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Converter.hpp"
-#include <iomanip> //for setprecision()
+
+
+Converter::Converter()
+{}
+
+Converter::Converter(const Converter &old_obj)
+{
+    *this = old_obj;
+}
+
+Converter& Converter::operator=(const Converter &obj)
+{
+    this->str = obj.str;
+    this->type = obj.type;
+    this->valchar = obj.valchar;
+    this->valint = obj.valint;
+    this->valfloat = obj.valfloat;
+    this->valdouble = obj.valdouble;
+    this->special = obj.valdouble;
+    return (*this);
+}
+
+Converter::~Converter()
+{}
 
 void Converter::checkType()
 {
@@ -69,7 +92,7 @@ void Converter::checkType()
         if (substr.find('.') != std::string::npos && \
         (substr.find_first_of(".") == substr.find_last_of("."))) //checks if decimal present and only one present
         {
-            if (substr.find_first_not_of(".0123456789") == std::string::npos && substr[l - 1] != '.') //check to see if no other character present
+            if (substr.find_first_not_of(".0123456789") == std::string::npos) //check to see if no other character present
             {
                 this->type = DoubleType;
                 try
@@ -84,8 +107,13 @@ void Converter::checkType()
                 return ;
             }
             else if (substr.find_first_not_of(".0123456789f") == std::string::npos &&\
-            substr[l - 1] == 'f' && (substr.find_first_of("f") == substr.find_last_of("f"))) //checks if last char is 'f' and only one char present
+            substr[l - 1] == 'f' && (substr.find_first_of("f") == substr.find_last_of("f"))) //checks if last char is 'f' and only one char present and second last char is not decimal
             {
+                if (substr == ".f")
+                {
+                    this->type = UnknownType;
+                    return ;
+                }
                 this->type = FloatType;
                 try
                 {
@@ -163,8 +191,10 @@ void Converter::printValues(void)
     }  
     if (this->valint >= 32 && this->valint<= 126)
         std::cout << "char: \'"<< this->valchar << "\'"<<std::endl;
-    else
+    else if ((this->valint >= 0 && this->valint<= 31) ||(this->valint == 127))
         std::cout << "char: Non displayable" <<std::endl;
+    else
+        std::cout << "char: impossible" <<std::endl;
     std::cout << "int: " << this->valint <<std::endl;
     std::cout << "float: "<< std::fixed << std::setprecision(1) <<this->valfloat <<"f" <<std::endl;
     std::cout << "double: "<< this->valdouble <<std::endl;
@@ -189,6 +219,8 @@ Converter::Converter(std::string str)
         }
         printValues(); 
     }
+    else
+        std::cout << "Input value is not a valid type."<<std::endl;
     
 }
 

@@ -5,31 +5,39 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 10:16:33 by nali              #+#    #+#             */
-/*   Updated: 2022/10/10 10:37:36 by nali             ###   ########.fr       */
+/*   Created: 2022/10/10 10:49:40 by nali              #+#    #+#             */
+/*   Updated: 2022/10/10 14:30:39 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Converter.hpp"
-#include <iostream>
+#include "Data.hpp"
 
-int main(int argc, char *argv[])
+// #include <stdint.h>
+#include <cstdint>
+#include <iostream>
+uintptr_t serialize(Data* ptr)
 {
-   if (argc != 2)
-   {
-      std::cout << "Please provide one argument." <<std::endl;
-      return(0);
-   }
-   
-   try
-   {
-      Converter c(argv[1]);
-   }
-   catch(const std::exception& e)
-   {
-      std::cerr << e.what() << std::endl;;
-   }
-   return (0);
+    // void *vp;
+    // vp = reinterpret_cast<void *>(ptr);
+    uintptr_t result = reinterpret_cast<uintptr_t>(ptr);
+    return (result);
 }
-/*inputs '18.' for double and '18.f' for float are valid
-but inputs '.' for double and '.f' for float are invalid*/
+
+Data* deserialize(uintptr_t raw)
+{
+    // void *vp;
+    // vp = reinterpret_cast<void *>(raw);
+    Data *d= reinterpret_cast<Data *>(raw);
+    return (d);
+}
+
+int main (void)
+{
+
+    Data *data_ptr = new Data(10);
+    uintptr_t test = serialize(data_ptr);
+    Data *data_ptr1 = deserialize(test);
+    data_ptr1->printHello();
+    return 0;
+}
+

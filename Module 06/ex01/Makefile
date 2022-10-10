@@ -6,19 +6,19 @@
 #    By: nali <nali@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/05 09:59:05 by nali              #+#    #+#              #
-#    Updated: 2022/10/10 10:37:59 by nali             ###   ########.fr        #
+#    Updated: 2022/10/10 14:28:11 by nali             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= converter
 
-SRCS	= main.cpp Converter.cpp
+SRCS	= main.cpp Data.cpp
 
 OBJS	= ${SRCS:.cpp=.o}
 
 CC		= c++
 
-CFLAGS	= -Wall -Werror -Wextra -std=c++98
+CFLAGS	= -Wall -std=c++98
 
 RM		= rm -f
 
