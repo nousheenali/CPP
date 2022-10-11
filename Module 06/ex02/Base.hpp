@@ -1,40 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Data.cpp                                           :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/10 13:38:48 by nali              #+#    #+#             */
-/*   Updated: 2022/10/10 19:04:33 by nali             ###   ########.fr       */
+/*   Created: 2022/10/10 21:19:24 by nali              #+#    #+#             */
+/*   Updated: 2022/10/11 11:09:43 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Data.hpp"
+#ifndef BASE_H
+#define BASE_H
 
-Data::Data()
-{}
-        
-Data::Data(std::string str)
+#include <iostream>
+
+class Base
 {
-    name = str;
-}
 
-void Data::printHello(void)
-{
-    std::cout << "Hello " << name << "!" << std::endl;
-}
+    public:
+        virtual ~Base();
+};
 
-Data::~Data()
-{}
-
-Data::Data(const Data &old_obj)
-{
-    *this = old_obj;
-}
-
-Data &Data::operator=(const Data &obj)
-{
-    this->name = obj.name;
-    return (*this);
-}
+#endif
