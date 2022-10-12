@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 18:53:12 by nali              #+#    #+#             */
-/*   Updated: 2022/09/24 17:31:19 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/12 14:34:04 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,16 +24,18 @@ Brain::Brain(const Brain &old_obj)
     *this = old_obj;
 }
 
-void Brain::operator= (const Brain &obj) 
+Brain &Brain::operator= (const Brain &obj) 
 { 
     std::cout <<"Brain Copy assignment operator called"<< std::endl;
+    this->size = 0; //set idea is set to zero has setIdea() will increment as ideas are copied
     for (int i = 0; i < 100; i++)
     { 
         std::string s = obj.getIdea(i);
         if (s.empty()) //copy only till values are present otherwise setidea will have problems for this obj
             break;
-        this->setIdea(obj.getIdea(i));
+        this->setIdea(s);
     }
+    return (*this);
 }
 
 Brain::~Brain()

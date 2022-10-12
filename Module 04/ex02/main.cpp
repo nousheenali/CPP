@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 08:26:08 by nali              #+#    #+#             */
-/*   Updated: 2022/09/24 18:12:11 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/12 15:46:06 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include "WrongCat.hpp"
+#include "Brain.hpp"
 
 int main() 
 {
@@ -58,5 +59,5 @@ int main()
     }
     // // delete j;//should not create a leak 
     // // delete i;
-    // return 0; 
+    return 0; 
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 18:02:34 by nali              #+#    #+#             */
-/*   Updated: 2022/09/23 18:04:24 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/12 10:46:53 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,11 @@ WrongAnimal::WrongAnimal(const WrongAnimal &old_obj)
     *this = old_obj;
 }
 
-void WrongAnimal::operator= (const WrongAnimal &obj)
+WrongAnimal &WrongAnimal::operator= (const WrongAnimal &obj)
 { 
     std::cout <<"WrongAnimal Copy assignment operator called"<< std::endl;
     this->type = obj.type;
+    return (*this);
 }
 
 WrongAnimal::~WrongAnimal()

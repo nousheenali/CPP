@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 18:41:12 by nali              #+#    #+#             */
-/*   Updated: 2022/09/24 15:43:06 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/12 14:34:16 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Brain
     public:
         Brain();
         Brain(const Brain &old_obj);
-        void operator=(const Brain &obj);
+        Brain &operator=(const Brain &obj);
         ~Brain();
         void setIdea(std::string idea);
         std::string getIdea(int i) const;

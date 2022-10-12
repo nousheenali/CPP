@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+         #
+#    By: nali <nali@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/05 09:59:05 by nali              #+#    #+#              #
-#    Updated: 2022/09/23 22:04:00 by nali             ###   ########.fr        #
+#    Updated: 2022/10/12 10:34:56 by nali             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ OBJS	= ${SRCS:.cpp=.o}
 
 CC		= c++
 
-CFLAGS	= -Wall
+CFLAGS	=  -Wall -Werror -Wextra -std=c++98
 
 RM		= rm -f
 
@@ -28,7 +28,6 @@ all:	${NAME}
 
 ${NAME}:	${OBJS}
 		$(CC) ${CFLAGS} ${SRCS} -o $(NAME)
-		${RM} ${OBJS}
 			
 
 clean:		
