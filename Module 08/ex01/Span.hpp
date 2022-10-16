@@ -6,7 +6,7 @@
 /*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 18:32:42 by nali              #+#    #+#             */
-/*   Updated: 2022/10/16 22:00:05 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/16 23:35:42 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,16 @@ class Span
         unsigned int N;
         size_t size; 
     public:
+        Span();
         Span(unsigned int N);
+        ~Span();
+        Span(const Span &obj);
+        Span &operator=(const Span &obj);
         void addNumber(int num);
         void printValues();
         int shortestSpan();
         int longestSpan();
-        // void insertValues(void);
+        void insertValuesIterator(std::set<int>::iterator iter1, std::set<int>::iterator  iter2);
         class SpanFullException :public std::exception
         {
             public:

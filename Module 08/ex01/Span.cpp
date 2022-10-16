@@ -6,7 +6,7 @@
 /*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 18:32:38 by nali              #+#    #+#             */
-/*   Updated: 2022/10/16 22:00:11 by nali             ###   ########.fr       */
+/*   Updated: 2022/10/16 23:37:48 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,27 @@ const char *Span::SpanFullException::what() const throw()
 const char *Span::TooFewElementsException::what() const throw()
 {
     return("Span cannot be found as there are less than 2 elements.");
+}
+
+Span::Span()
+{}
+
+Span::~Span()
+{}
+
+Span::Span(const Span &obj)
+{
+    *this = obj;
+}
+
+Span &Span::operator=(const Span &obj)
+{
+    std::set<int>::iterator iter;
+    this->size = obj.size;
+    this->N = obj.N;
+    for (iter = obj.numbers.begin(); iter != obj.numbers.end(); ++iter)
+        this->numbers.insert(*iter);
+    return (*this);
 }
 
 void Span::printValues()
@@ -114,7 +135,11 @@ int Span::longestSpan()
     return result; 
 }
 
-// void Span::insertValues(void)
-// {
-//     this->numbers.insert(1, 1000);
-// }
+void Span::insertValuesIterator(std::set<int>::iterator iter1, std::set<int>::iterator  iter2)
+{   
+    while(iter1 != iter2)
+    {
+       this->numbers.insert(*iter1);
+       ++iter1;
+    }
+}
