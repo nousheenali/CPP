@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 10:49:40 by nali              #+#    #+#             */
-/*   Updated: 2022/10/10 19:05:37 by nali             ###   ########.fr       */
+/*   Updated: 2022/11/10 17:01:48 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,7 @@ int main (void)
     delete data_ptr;
     return 0;
 }
-
+//uintptr_t 
+// an unsigned integer type with the property that any valid pointer to void 
+// can be converted to this type, then converted back to pointer to void, and
+//  the result will compare equal to the original pointer".

@@ -6,7 +6,7 @@
 /*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 12:32:54 by nali              #+#    #+#             */
-/*   Updated: 2022/10/10 10:46:47 by nali             ###   ########.fr       */
+/*   Updated: 2022/11/13 08:55:20 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,17 +53,12 @@ void Converter::checkType()
         this->type = DoubleType;
         this->special = 2;
         return ;
-        
+
     }
-    if (l == 1 &&  isalpha(str[0])) //to check char type
+    if (l == 1 &&  (isalpha(str[0]) || !isdigit(str[0]))) //to check char type of ascii value
     {
         this->type = CharType;
         this->valchar = str[0];
-        return ;
-    }
-    else if (l == 1 && !isdigit(str[0])) // for cases like +, - , .
-    {
-        this->type = UnknownType;
         return ;
     }
     else 
@@ -107,7 +102,7 @@ void Converter::checkType()
                 return ;
             }
             else if (substr.find_first_not_of(".0123456789f") == std::string::npos &&\
-            substr[l - 1] == 'f' && (substr.find_first_of("f") == substr.find_last_of("f"))) //checks if last char is 'f' and only one char present and second last char is not decimal
+            substr[l - 1] == 'f' && (substr.find_first_of("f") == substr.find_last_of("f"))) //checks if last char is 'f' and only one char present 
             {
                 if (substr == ".f")
                 {
@@ -202,7 +197,7 @@ void Converter::printValues(void)
     
 Converter::Converter(std::string str)
 {
-    this->special = 0;
+    this->special = 0; // to detect special cases +inf,-inf,nan
     this->str = str;
     checkType();
     if (this->type != UnknownType)

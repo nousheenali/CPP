@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 20:14:05 by nali              #+#    #+#             */
-/*   Updated: 2022/10/11 12:26:03 by nali             ###   ########.fr       */
+/*   Updated: 2022/11/13 08:52:44 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,7 @@ void identify(Base& p)
 int main(void)
 {
     Base *obj;
+    std::srand(time(0)); // to reset rand() function
     for (int i = 0; i < 6; i++)
     {
         obj = generate();

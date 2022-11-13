@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Data.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 10:58:48 by nali              #+#    #+#             */
-/*   Updated: 2022/10/10 18:59:35 by nali             ###   ########.fr       */
+/*   Updated: 2022/11/10 16:59:12 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ class Data
         Data(const Data &old_obj);
         Data &operator=(const Data &obj);
 
-    
 };
 
 #endif
