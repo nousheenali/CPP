@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 20:14:26 by nali              #+#    #+#             */
-/*   Updated: 2022/10/15 16:14:46 by nali             ###   ########.fr       */
+/*   Updated: 2022/11/13 10:00:42 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Array
 {
     private:
         T *arr;
-        unsigned int n;
+        unsigned int n; // no.of elements in array
         unsigned int index;
     public:
         Array();

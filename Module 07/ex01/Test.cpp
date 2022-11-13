@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Test.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 19:45:30 by nali              #+#    #+#             */
-/*   Updated: 2022/10/11 20:10:54 by nali             ###   ########.fr       */
+/*   Updated: 2022/11/13 09:42:02 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,12 @@ Test &Test::operator=(const Test &obj)
     return (*this);
 }
 
-void Test::setVal(std::string str)
+void Test::setName(std::string str)
 { 
     this->name = str;
 }
 
-std::string Test::getVal() const
+std::string Test::getName() const
 { 
     return(name);
 }

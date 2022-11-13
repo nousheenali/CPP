@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Test.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 19:42:08 by nali              #+#    #+#             */
-/*   Updated: 2022/10/11 20:09:57 by nali             ###   ########.fr       */
+/*   Updated: 2022/11/13 09:39:35 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ class Test
         ~Test();
         Test(const Test &old_obj);
         Test &operator=(const Test &obj);
-        void setVal(std::string str);
-        std::string getVal() const;
+        void setName(std::string str);
+        std::string getName() const;
         
 };
 

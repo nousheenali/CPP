@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 15:23:57 by nali              #+#    #+#             */
-/*   Updated: 2022/10/11 20:07:03 by nali             ###   ########.fr       */
+/*   Updated: 2022/11/13 09:40:12 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 std::ostream &	operator<<( std::ostream & out, const Test & t)
 {
-	out << t.getVal();
+	out << t.getName();
 	return (out);
 }
 
@@ -35,9 +35,9 @@ int main( void )
     //printing class array
     std::cout << " ---CLASS ARRAY--- " <<std::endl;
     Test arr[3];
-    arr[0].setVal("matt");
-    arr[1].setVal("rob");
-    arr[2].setVal("tom");
+    arr[0].setName("matt");
+    arr[1].setName("rob");
+    arr[2].setName("tom");
     iter<Test>(arr,3,&print_value);
     
     return 0; 
