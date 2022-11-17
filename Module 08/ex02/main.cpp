@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 15:23:57 by nali              #+#    #+#             */
-/*   Updated: 2022/10/20 10:14:19 by nali             ###   ########.fr       */
+/*   Updated: 2022/11/16 11:00:40 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,21 @@ int main()
     mstack.push(1111);
     MutantStack<int>::iterator it = mstack.begin(); 
     MutantStack<int>::iterator ite = mstack.end();
-    // ++it;
-    // --it;
+    ++it;
+    --it;
     std::cout << "-----printing contents of stack-------" << std::endl;
     while (it != ite) 
     {
         std::cout << *it << std::endl;
         ++it; 
     }
-    std::stack<int> s(mstack); 
-
+    std::stack<int> s(mstack);
+    std::cout << "-----testing standard stack-------" << std::endl;
+    std::cout << s.top() << std::endl;
+    s.pop();
+    std::cout << s.top() << std::endl;
+    s.pop();
+    std::cout << s.top() << std::endl;
     std::cout << "-----Checking same code for list-------" << std::endl;
     std::list<int> lst;
     lst.push_back(5);

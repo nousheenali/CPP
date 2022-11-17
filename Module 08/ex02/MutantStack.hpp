@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MutantStack.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 19:42:50 by nali              #+#    #+#             */
-/*   Updated: 2022/10/20 10:40:29 by nali             ###   ########.fr       */
+/*   Updated: 2022/11/16 10:52:54 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,9 @@ begin() and end() are member functions of all containers.
 
 MutantStack class inherit from the std::stack class that's itself inherits from
  the std::deque
+
+
+how to create iterator from underlying container
+ https://stackoverflow.com/questions/3582608/how-to-correctly-implement-custom-iterators-and-const-iterators
  
 */

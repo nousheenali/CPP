@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 18:32:38 by nali              #+#    #+#             */
-/*   Updated: 2022/10/16 23:37:48 by nali             ###   ########.fr       */
+/*   Updated: 2022/11/15 14:08:56 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ Span::Span(unsigned int N)
     this->N = N;
 }
 
+//if duplicate value is added to set no compiler error will occur but it doesn't add the value
 void Span::addNumber(int num)
 {
     try

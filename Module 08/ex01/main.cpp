@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 15:23:57 by nali              #+#    #+#             */
-/*   Updated: 2022/10/19 19:55:46 by nali             ###   ########.fr       */
+/*   Updated: 2022/11/15 15:45:20 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main()
     sp.addNumber(11);
     sp.addNumber(9);
     sp.addNumber(17);
-    sp.addNumber(12);
+    sp.addNumber(12); //gives an exception 
     sp.printValues();
     std::cout << "Shortest span is: " << sp.shortestSpan() << std::endl;
     std::cout << "Longest span is: " << sp.longestSpan() << std::endl;
@@ -33,6 +33,7 @@ int main()
     std::cout << "--------------------------------" << std::endl;
     Span sp2 = Span(10000);
     int n;
+    //rand() % 10000 will yield an integer between 0 and 9999
     for (int i = 0; i < 10000; i++)
 	{
         if (i % 2 == 0)
@@ -60,3 +61,4 @@ int main()
     sp3.printValues();
     return 0; 
 }
+//rand() % 10000 will yield an integer between 0 and 9999

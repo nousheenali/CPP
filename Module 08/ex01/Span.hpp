@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nali <nali@42abudhabi.ae>                  +#+  +:+       +#+        */
+/*   By: nali <nali@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 18:32:42 by nali              #+#    #+#             */
-/*   Updated: 2022/10/16 23:35:42 by nali             ###   ########.fr       */
+/*   Updated: 2022/11/15 13:57:43 by nali             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class Span
 {
     public:
         std::set<int> numbers; //choosing set beacuse it is automatically sorted
-        unsigned int N;
-        size_t size; 
+        unsigned int N; //max number of elements that can be added
+        size_t size; //number of elements present 
     public:
         Span();
         Span(unsigned int N);
